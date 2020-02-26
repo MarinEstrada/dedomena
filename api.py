@@ -15,9 +15,16 @@ class Dedomena(Resource):
 # path_name is a string
 # gets list of files
 class CreateDatabase(Resource):
+
+	# # function to modify string containing pathname
+	# def modify_path_name(path_name):
+	# 	pathname_modified = path_name.replace('+', '/')
+	# 	return pathname_modified
+
 	def get(self, path_name):
 		# print(path_name)
-		return list_of_files(path_name)
+		pathname_modified = path_name.replace('+', '/')
+		return list_of_files(pathname_modified)
 		# return "Hello!"
 
 api.add_resource(CreateDatabase,'/<string:path_name>')

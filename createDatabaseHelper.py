@@ -4,12 +4,12 @@ from os.path import join, normpath
 
 def list_of_files(path_name):
 
-	pathname_modified = path_name.replace('+', '/')
+	# pathname_modified = path_name.replace('+', '/')
 
 
 	list_of_files = []
 
-	for dirpath, dirnames, filenames in os.walk(pathname_modified):
+	for dirpath, dirnames, filenames in os.walk(path_name):
 		list_of_files.extend(filenames)
 		# print(list_of_files)
 		# print(filenames)
