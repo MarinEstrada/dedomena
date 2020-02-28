@@ -7,8 +7,10 @@ spark = SparkSession\
   .getOrCreate()
 
 def make_spark_df(path_to_file):
-	df = spark.read.csv(path_to_file)
-	print (df)
+    df = spark.read.csv(path_to_file)
+    print (df) 
+    print(df.show())
 
-make_spark_df("/drives/c/Users/adria/cmpt/bro_workfolder/dedomena/test.csv")
+path = "/Users/samirmarin/workspaces/dedomena/example.csv" 
+make_spark_df(path)
 
